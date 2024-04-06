@@ -23,7 +23,7 @@ class YoutubeSearchTest(unittest.TestCase):
         driver = self.driver
         driver.get("https://www.youtube.com")
         search_box = driver.find_element("name", "search_query")
-        search_box.send_keys("Kuplinov")
+        search_box.send_keys("MrBeast")
         search_box.send_keys(Keys.RETURN)
         time.sleep(3)
         assert "MrBeast" in driver.page_source
