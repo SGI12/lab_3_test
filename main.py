@@ -11,7 +11,7 @@ class YoutubeSearchTest(unittest.TestCase):
         self.driver = webdriver.Chrome()
 
     def test_video_play(self):
-        self.driver.get('https://www.youtube.com/watch?v=NpzTEVfUo_U&list=WL&index=4&t=1200s')
+        self.driver.get('https://youtu.be/dQw4w9WgXcQ')
         time.sleep(3)
         play_button = self.driver.find_element('css selector', '.ytp-play-button')
         play_button.click()
@@ -26,7 +26,7 @@ class YoutubeSearchTest(unittest.TestCase):
         search_box.send_keys("Kuplinov")
         search_box.send_keys(Keys.RETURN)
         time.sleep(3)
-        assert "Kuplinov" in driver.page_source
+        assert "MrBeast" in driver.page_source
 
     def test_authorization(self):
         driver = self.driver
